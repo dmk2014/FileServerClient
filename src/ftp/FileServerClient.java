@@ -14,7 +14,7 @@ public class FileServerClient{
     FileServer service;
 
     public FileServerClient(String hostname, int port) throws Exception{
-        FileServerService fileServer = new FileServerService(new URL("http://" +hostname + ":" + port + "/FileServer?wsdl"));
+        FileServerService fileServer = new FileServerService(new URL("http://" +hostname + ":" + port + "/FileServer/ftpservice?wsdl"));
         service = fileServer.getFileServerPort();
     }
 
